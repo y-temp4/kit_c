@@ -1,33 +1,35 @@
 
+.post-container
+  .row
+    .col-lg-12
+      h1
+        = @department_name
+      = paginate @posts
 
-.row
-  .col-lg-12
-    h1
-      = @department_name
-    = paginate @posts
+  .row
+    .col-lg-8
+      - @posts.each do |post|
+          .panel.panel-default
+            .panel-body
+              .text-left
+                span id：
+                = post.session_id
+            .panel-body.post-content
+                = post.content
+            .panel-body
+              .text-right
+                = post.created_at.to_s(:default)
+    .col-lg-4
+    .form-to-footer
+      = form_for Post.new do |f|
+        .form-group
+          = f.text_field :content, class: 'form-control set-form-width'
+        = f.hidden_field :department_id, value: params[:department_id]
+        = f.hidden_field :session_id, value: @user_name
+        .text-center
+          = f.submit value: '書き込む', class: 'btn btn-info set-btn-width'
 
-.row
-  .col-lg-8
-    - @posts.each do |post|
-        .panel.panel-default
-          .panel-body
-            .text-left
-              = post.session_id
-          .panel-body.post-content
-              = post.content
-          .panel-body
-            .text-right
-              = post.created_at.to_s(:default)
-  .col-lg-4
-    = form_for Post.new do |f|
-      .form-group
-        = f.text_field :content, class: 'form-control'
-      = f.hidden_field :department_id, value: params[:department_id]
-      = f.hidden_field :session_id, value: @user_name
-      .text-center
-        = f.submit value: '書き込む', class: 'btn btn-info'
-
-= paginate @posts
+  = paginate @posts
 
 / - if @posts.empty?
 /   naidesu
