@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-
+    @department_name = Department.find_by(id: params[:department_id]).name
     @posts = Post.where(department_id: params[:department_id])
   end
 

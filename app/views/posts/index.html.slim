@@ -1,4 +1,9 @@
 .row
+  .col-lg-12
+    h1
+      = @department_name
+
+.row
   .col-lg-8
     - @posts.each do |post|
         .panel.panel-default
