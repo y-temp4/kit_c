@@ -1,5 +1,6 @@
 class TopsController < ApplicationController
   def index
-  	@departments = Department.all
+    @faculties = Faculty.all
+    @departments = Department.all
   end
 end

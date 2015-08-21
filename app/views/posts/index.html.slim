@@ -1,14 +1,23 @@
-- @posts.each do |post|
-  p
-    = post.session_id
-    = post.content
-    = post.created_at.to_s(:default)
-
-= form_for Post.new do |f|
-  = f.text_field :content
-  = f.hidden_field :department_id, value: params[:department_id]
-  = f.hidden_field :session_id, value: @user_name
-  = f.submit
+.row
+  .col-lg-8
+    - @posts.each do |post|
+        .panel.panel-default
+          .panel-body
+            .text-left
+              = post.session_id
+          .panel-body.post-content
+              = post.content
+          .panel-body
+            .text-right
+              = post.created_at.to_s(:default)
+  .col-lg-4
+    = form_for Post.new do |f|
+      .form-group
+        = f.text_field :content, class: 'form-control'
+      = f.hidden_field :department_id, value: params[:department_id]
+      = f.hidden_field :session_id, value: @user_name
+      .text-center
+        = f.submit value: '書き込む', class: 'btn btn-info'
 
 / - if @posts.empty?
 /   naidesu

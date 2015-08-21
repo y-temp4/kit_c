@@ -1,2 +1,27 @@
-- @departments.each do |department|
-	p = link_to department.name, department_posts_path(department.id)
+.jumbotron
+  h1 KIT非公式掲示板（仮）
+  p このサイトは非公式で運営している、金沢工業大学の掲示板っぽいものです。
+
+.row
+  .col-lg-10.col-lg-offset-1
+    .panel.panel-info
+      .panel-heading
+        h2.panel-title 使い方
+      .panel-body
+        ol
+          li 学科を選択しましょう。
+          li ページが移動するので、書き込み、もしくはromりましょう。
+
+.row
+  .col-lg-10.col-lg-offset-1
+    .panel.panel-success
+      .panel-heading
+        h2.panel-title 学科一覧
+      .panel-body
+        .list-group
+          - @departments.each do |department|
+            = link_to department.name,
+              department_posts_path(department.id),
+              class: 'list-group-item'
+
+

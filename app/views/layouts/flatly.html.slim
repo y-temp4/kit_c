@@ -15,8 +15,20 @@ html(lang="ja")
 
   body
 
-    = yield
+    .navbar.navbar-default
+      .container
+        .nabvar-header
+          = link_to 'kit-c', root_path, class: 'navbar-brand'
 
+    .container
+
+      = yield
+
+      .footer
+        .row
+          .col-lg-12.text-center
+            p
+              small ©kit-c
     /!
       | Javascripts
       | \==================================================
