@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :departments, only: [:index] do
     resources :posts
   end
+  post "posts" => "posts#create"
 
   root 'tops#index'
   # The priority is based upon order of creation: first created -> highest priority.

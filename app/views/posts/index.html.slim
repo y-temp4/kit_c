@@ -1,2 +1,14 @@
-h1 Posts#index
-p Find me in app/views/posts/index.html.slim
+- @posts.each do |post|
+  p = post.content
+
+= form_for Post.new do |f|
+  = f.text_field :content
+  = f.hidden_field :department_id, value: params[:department_id]
+  = f.submit
+
+/ - if @posts.empty?
+/   naidesu
+/ - else
+/   - @posts.each do |post|
+/     = post.content
+/
