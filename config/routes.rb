@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'tops/index'
 
-  get 'departments/index'
+  resources :departments, only: [:index] do
+    resources :posts
+  end
 
   root 'tops#index'
   # The priority is based upon order of creation: first created -> highest priority.
