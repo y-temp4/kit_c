@@ -1,7 +1,10 @@
+
+
 .row
   .col-lg-12
     h1
       = @department_name
+    = paginate @posts
 
 .row
   .col-lg-8
@@ -23,6 +26,8 @@
       = f.hidden_field :session_id, value: @user_name
       .text-center
         = f.submit value: '書き込む', class: 'btn btn-info'
+
+= paginate @posts
 
 / - if @posts.empty?
 /   naidesu
