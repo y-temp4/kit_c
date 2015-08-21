@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'post/index'
+  get 'posts/index'
+
+  get 'tops/index'
 
   get 'departments/index'
 
