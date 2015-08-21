@@ -7,9 +7,10 @@
 
 .post-content {
   font-size: 24px;
+  word-wrap: break-word;
 }
 
-@media (max-width: 468px) {
+@media screen and (max-width: 768px) {
   html {
     position: relative;
     min-height: 100%;
@@ -25,7 +26,7 @@
   .form-to-footer {
     position: fixed;
     bottom: 0;
-    margin-bottom: 0;
+    margin: 0 0 0 -15px;
     padding: 14px 8px;
     width: 100%;
     background: #2C3E50;

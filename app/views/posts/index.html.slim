@@ -7,7 +7,7 @@
       = paginate @posts
 
   .row
-    .col-lg-8
+    .col-lg-8.col-md-8.col-sm-8
       - @posts.each do |post|
           .panel.panel-default
             .panel-body
@@ -19,15 +19,15 @@
             .panel-body
               .text-right
                 = post.created_at.to_s(:default)
-    .col-lg-4
-    .form-to-footer
-      = form_for Post.new do |f|
-        .form-group
-          = f.text_field :content, class: 'form-control set-form-width'
-        = f.hidden_field :department_id, value: params[:department_id]
-        = f.hidden_field :session_id, value: @user_name
-        .text-center
-          = f.submit value: '書き込む', class: 'btn btn-info set-btn-width'
+    .col-lg-4.col-md-4.col-sm-4
+      .form-to-footer
+        = form_for Post.new do |f|
+          .form-group
+            = f.text_field :content, class: 'form-control set-form-width'
+          = f.hidden_field :department_id, value: params[:department_id]
+          = f.hidden_field :session_id, value: @user_name
+          .text-center
+            = f.submit value: '書き込む', class: 'btn btn-info set-btn-width'
 
   = paginate @posts
 
