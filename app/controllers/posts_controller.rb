@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     @posts = Post.where(department_id: params[:department_id])
                  .page(params[:page])
                  .per(10)
+                 .order("id DESC")
   end
 
   def create
