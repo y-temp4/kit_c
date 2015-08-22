@@ -4,3 +4,7 @@
  *= require flatly/loader
  *= require flatly/bootswatch
 */
+
+.footer {
+	padding: 40px 0;
+}
