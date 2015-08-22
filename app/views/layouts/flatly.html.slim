@@ -23,6 +23,9 @@ html(lang="ja")
 
     .container
 
+      - flash.each do |key, value|
+        = content_tag(:div, value, class: "alert alert-#{key}")
+
       = yield
 
       footer.footer

@@ -15,7 +15,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to department_posts_path params[:post][:department_id]
     else
-      render department_posts_path params[:department_id]
+      flash[:danger] = "書き込みに失敗しました。空では書き込みできません。"
+      redirect_to department_posts_path params[:post][:department_id]
     end
   end
 
