@@ -1,2 +1,21 @@
-h1 Contacts#index
-p Find me in app/views/contacts/index.html.slim
+.row
+  .col-lg-6
+    .panel.panel-success
+      .panel-heading
+        h1.h4 お問い合わせ
+      .panel-body
+        | お問い合せは
+        = link_to '@y_temp4', 'https://bootswatch.com/flatly/'
+        | までお願いします。
+
+  .col-lg-6
+    .panel.panel-info
+      .panel-heading
+        h2.h4 ソースコードはこちら
+      .panel-body
+        = link_to 'https://github.com/y-temp4/kit_c', 'https://github.com/y-temp4/kit_c'
+
+.row
+  .col-lg-12
+    = link_to '>> 学科一覧へ', departments_path
+
