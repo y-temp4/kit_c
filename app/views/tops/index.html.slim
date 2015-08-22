@@ -23,7 +23,8 @@
         ul.list-group
           - @departments.each do |department|
             li.list-group-item
-              = link_to department.name, department_posts_path(department.id)
+              .list-content
+                = link_to department.name, department_posts_path(department.id)
               span.badge
                 = department.post.count
 

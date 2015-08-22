@@ -6,7 +6,7 @@
 */
 
 /*.footer {
-	padding: 40px 0;
+  padding: 40px 0;
 }
 */
 
@@ -27,5 +27,32 @@ body {
 }
 
 .footer {
-	padding: 10px 0 0 0;
+  padding: 10px 0 0 0;
+}
+
+.badge {
+  float: right;
+  margin: 12px 9px 0 0;
+}
+
+.list-content {
+  width: 90%;
+  float: left;
+}
+
+.list-group-item {
+  width: 100%;
+}
+
+.list-group-item a {
+  display: block;
+  width: 100%;
+  margin-right: 0;
+  padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+  .list-content {
+    width: 85%;
+  }
 }
