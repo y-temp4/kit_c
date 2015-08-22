@@ -1,2 +1,13 @@
-h1 Departments#index
-p Find me in app/views/departments/index.html.slim
+.row
+  .col-lg-10.col-lg-offset-1
+    .panel.panel-success
+      .panel-heading
+        h2.panel-title 学科一覧
+      .panel-body
+        .list-group
+          - @departments.each do |department|
+            = link_to department.name,
+              department_posts_path(department.id),
+              class: 'list-group-item'
+
+
