@@ -1,23 +1,32 @@
 .post-container
   .row
     .col-lg-12
-      h1
+      h1.department-name
         = @department_name
+    .col-lg-12
+      .announce
+        = link_to '>>学部一覧へ移動する', departments_path
+    .col-lg-12
       = paginate @posts
 
   .row
     .col-lg-8.col-md-8.col-sm-8
-      - @posts.each do |post|
-          .panel.panel-default
-            .panel-body
-              .text-left
-                span id：
-                = post.session_id
-            .panel-body.post-content
-                = post.content
-            .panel-body
-              .text-right
-                = post.created_at.to_s(:default)
+      - if @posts.empty?
+        .jumbotron
+          h2 書き込みがありません！
+          p あなたが書き込んで、最初の投稿者になろう！
+      - else
+        - @posts.each do |post|
+            .panel.panel-default
+              .panel-body
+                .text-left
+                  span id：
+                  = post.session_id
+              .panel-body.post-content
+                  = post.content
+              .panel-body
+                .text-right
+                  = post.created_at.to_s(:default)
     .col-lg-4.col-md-4.col-sm-4
       .form-to-footer
         = form_for Post.new do |f|

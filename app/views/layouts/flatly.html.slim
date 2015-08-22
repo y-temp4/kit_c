@@ -16,10 +16,26 @@ html(lang="ja")
 
   body
 
-    .navbar.navbar-default
+  #wrap
+
+    nav.navbar.navbar-default
       .container
-        .nabvar-header
-          = link_to 'kit-c', root_path, class: 'navbar-brand'
+        .container-fluid
+          .navbar-header
+            button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+              span.sr-only
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            = link_to 'kit-c', root_path, class: 'navbar-brand'
+
+          .collapse.navbar-collapse#bs-example-navbar-collapse-1
+            ul.nav.navbar-nav.navbar-right
+              li
+                  = link_to 'お問い合わせ', contacts_path
+              li
+                  = link_to 'kit-c', root_path
+
 
     .container
 
@@ -28,11 +44,13 @@ html(lang="ja")
 
       = yield
 
-    footer.footer
-      .container
-        .text-center
-          p
-            small.h4 © kit-c
+      #push
+
+  footer.footer
+    .container
+      .text-center
+        p
+          small.h4 © kit-c
 
     /!
       | Javascripts

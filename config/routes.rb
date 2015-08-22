@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'tops/index'
-
   resources :departments, only: [:index] do
     resources :posts, only: [:index, :create]
   end
   post "posts" => "posts#create"
+
+  resources :posts, only: [:index, :create]
+
+  resources :contacts, only: [:index]
+
 
   root 'tops#index'
   # The priority is based upon order of creation: first created -> highest priority.
