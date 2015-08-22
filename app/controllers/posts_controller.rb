@@ -9,9 +9,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    # @post.content = params[:post][:content]
-    # @post.department_id = params[:post][:department_id]
-    # @post.session_id = params[:post][:session_id]
     if @post.save
       redirect_to department_posts_path params[:post][:department_id]
     else
