@@ -31,10 +31,10 @@
       .form-to-footer
         = form_for Post.new do |f|
           .form-group
-            = f.text_field :content, class: 'form-control set-form-width'
+            = f.text_field :content, placeholder: 'テキストを入力してください', class: 'form-control set-form-width'
           = f.hidden_field :department_id, value: params[:department_id]
           = f.hidden_field :session_id, value: @user_name
-          .text-center
+          .text-right
             = f.submit value: '送信', class: 'btn btn-info set-btn-width'
 
   = paginate @posts
