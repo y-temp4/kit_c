@@ -1,0 +1,27 @@
+// Place all the styles related to the PublicRelations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.panel-cirkit {
+  border-color: #E67E22;
+
+  .panel-heading {
+    color: #ffffff;
+    background-color: #E67E22;
+    border-color: #E67E22;
+  }
+}
+
+.club-info {
+  p {
+    font-size: 16px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  small {
+    font-size: 14px;
+  }
+}

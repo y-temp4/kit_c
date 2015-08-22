@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'tops#index'
+
   resources :departments, only: [:index] do
     resources :posts, only: [:index, :create]
   end
@@ -9,8 +11,8 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:index]
 
+  resources :public_relations, path: 'pr', only: [:index]
 
-  root 'tops#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

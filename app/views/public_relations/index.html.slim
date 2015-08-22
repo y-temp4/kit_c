@@ -1,0 +1,79 @@
+.row
+  .col-lg-12
+    .page-header
+      h1.h2 ちょっとした宣伝
+
+  .col-lg-6.col-md-6
+    .panel.panel-info
+      .panel-heading
+        h2.h4 電子計算機研究会
+      .panel-body
+        blockquote.club-info
+          p
+            |
+              電子計算機研究会とは、 パソコンを使って制作活動をする部活です。 制作活動といっても色々ありますが、主に
+          ul
+            li PROGRAMMING(プログラミング)
+            li CG(コンピュータグラフィック)
+            li DTM(デスクトップミュージック)
+            li NETWORK(ネットワーク)
+          p
+            |
+              の制作活動をしています。
+          small 下記サイトより引用
+
+        ul
+          li
+            | サイト
+            ul
+              li
+                = link_to 'http://www2.kanazawa-it.ac.jp/kitic/', '//www2.kanazawa-it.ac.jp/kitic/'
+          li
+            | Twitter
+            ul
+              li
+                = link_to '@kitic', '//twitter.com/kitic_densan'
+
+  .col-lg-6.col-md-6
+    .panel.panel-cirkit
+      .panel-heading
+        h2.h4 CirKit
+      .panel-body
+        .well
+          |
+            ざっくり言うと、CirKitはITを駆使した地域活性化に取り組む団体です。
+            下のサイトは金沢工業大学周辺のお店を集めたポータルサイトです。
+            地元に詳しくない人は参考にしてね。
+
+        ul
+          li
+            | サイト
+            ul
+              li
+                = link_to 'http://www.cirkit.jp/', '//www.cirkit.jp/'
+          li
+            | Twitter
+            ul
+              li
+                | 株式会社CirKit
+                ul
+                  li
+                    = link_to '@cirkit_co', '//twitter.com/cirkit_co'
+              li
+                | CirKitポータル（公式）
+                ul
+                  li
+                    = link_to '@CirKit_Portal', '//twitter.com/CirKit_Portal'
+
+  .col-lg-12
+    .alert.alert-danger.alert-dismissible
+      button(type="button" class="close" data-dismiss="alert")×
+      h4 どちらも絶賛メンバー募集中です！
+      p
+        | 詳しくは下記のリンク、もしくは
+        = link_to '@y_temp4', '//twitter.com/y_temp4', class: 'alert-link'
+        | に連絡していただけたら、直接対応します。
+
+.row
+  .col-lg-12
+    = link_to '>> 学科一覧へ', departments_path

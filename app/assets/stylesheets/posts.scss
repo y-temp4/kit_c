@@ -15,16 +15,14 @@
   word-wrap: break-word;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   html {
     position: relative;
+    height: 100%;
     min-height: 100%;
   }
   body {
-    /* フッタと同じ高さに設定 */
     margin-bottom: 60px;
-
-    /* 一番下までスクロールした時の余白 */
     padding-bottom: 0;
   }
 
@@ -35,7 +33,6 @@
     padding: 0 8px;
     width: 100%;
     background: #2C3E50;
-    /* フッタの高さ */
     height: 68px;
     z-index: 10;
   }

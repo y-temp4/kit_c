@@ -18,10 +18,11 @@
       .panel-heading
         h2.panel-title 学科一覧
       .panel-body
-        .list-group
+        ul.list-group
           - @departments.each do |department|
-            = link_to department.name,
-              department_posts_path(department.id),
-              class: 'list-group-item'
+            li.list-group-item
+              = link_to department.name, department_posts_path(department.id)
+              span.badge
+                = department.post.count
 
 
