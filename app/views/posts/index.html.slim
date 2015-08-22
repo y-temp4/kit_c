@@ -1,3 +1,8 @@
+- if params[:page]
+  - provide(:title, "#{@department_name}の書き込み一覧 - #{params[:page]}ページ目")
+- else
+  - provide(:title, "#{@department_name}の書き込み一覧 - 1ページ目")
+
 .post-container
   .row
     .col-lg-12

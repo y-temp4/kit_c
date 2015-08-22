@@ -18,10 +18,14 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px;
+  margin: 0 auto -55px;
 }
 
 #push,
 .footer {
-  height: 60px;
+  height: 55px;
+}
+
+.footer {
+	padding: 10px 0 0 0;
 }
