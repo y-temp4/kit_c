@@ -3,11 +3,10 @@ Rails.application.routes.draw do
   root 'tops#index'
 
   resources :departments, only: [:index] do
-    resources :posts, only: [:index, :create]
+    resources :posts, only: [:index]
   end
-  post "posts" => "posts#create"
 
-  resources :posts, only: [:index, :create]
+  resources :posts, only: [:create]
 
   resources :contacts, only: [:index]
 
