@@ -1,3 +1,50 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-content {
+  font-size: 24px;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* フッタと同じ高さに設定 */
+    margin-bottom: 60px;
+
+    /* 一番下までスクロールした時の余白 */
+    padding-bottom: 0;
+  }
+
+  .form-to-footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 0 -15px;
+    padding: 0 8px;
+    width: 100%;
+    background: #2C3E50;
+    /* フッタの高さ */
+    height: 68px;
+    z-index: 10;
+  }
+
+  .set-form-width {
+    width: 70%;
+    background: white;
+    float: left;
+    margin: 0 10px 0 0;
+  }
+
+  .set-btn-width {
+    width: 26%;
+    float: left;
+  }
+
+  .footer {
+    padding: 0 0 68px 0;
+  }
+}

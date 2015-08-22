@@ -10,6 +10,7 @@ html(lang="ja")
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "flatly", :media => "all"
+    = stylesheet_link_tag controller.controller_name , media: "all", "data-turbolinks-track" => true
     = yield(:page_stylesheet) if content_for?(:page_stylesheet)
 
 
