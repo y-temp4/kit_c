@@ -8,11 +8,20 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new
-    @post.content = params[:post][:content]
-    @post.department_id = params[:post][:department_id]
-    @post.session_id = params[:post][:session_id]
-    @post.save
-    redirect_to department_posts_path params[:post][:department_id]
+    @post = Post.new(post_params)
+    # @post.content = params[:post][:content]
+    # @post.department_id = params[:post][:department_id]
+    # @post.session_id = params[:post][:session_id]
+    if @post.save
+      redirect_to department_posts_path params[:post][:department_id]
+    else
+      render department_posts_path params[:department_id]
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:content, :department_id, :session_id)
   end
 end

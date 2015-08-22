@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'posts/index'
 
   get 'tops/index'
 
   resources :departments, only: [:index] do
-    resources :posts
+    resources :posts, only: [:index, :create]
   end
   post "posts" => "posts#create"
 

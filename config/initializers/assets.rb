@@ -13,4 +13,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( flatly.css )
 Rails.application.config.assets.precompile += %w( flatly.js )
 Rails.application.config.assets.precompile += %w( tops.css )
+Rails.application.config.assets.precompile += %w( departments.css )
 Rails.application.config.assets.precompile += %w( posts.css )
